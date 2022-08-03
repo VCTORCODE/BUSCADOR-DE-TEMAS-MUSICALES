@@ -57,6 +57,8 @@ button {
   cursor: pointer;
   position: absolute;
   right: 0px;
+  text-align: center;
+  
 }
 
 .avatar-container {
@@ -119,7 +121,7 @@ button {
     flex-direction: column;
     align-items: flex-start;
     background-color: #fff;
-    margin: 10px;
+    margin: 4px;
     padding: 1vw 5vw ;
     box-shadow: 0px 0ps 10px rgb(202, 219, 193);
     border-radius: 5px;
@@ -132,17 +134,19 @@ button {
 
 @media screen and (max-height: 620PX) {
   header{
-    background-image: none;
-    height: 1%;
+    background-image: auto; 
+    /* height: auto; */
+    overflow: hidden;
   }
-  h1, .avatar-container, .avatar {
+  .avatar-container, .avatar {
     display: none;
     visibility: collapse !important;
+    overflow: hidden;    
   }
   .card{
     background-color: brown;
     margin: 0px !important;
-    padding: 1% 1% 1% 10% !important;
+    padding: 1.5% 1% 1% 10% !important;
     border-color: black;
     border-style: solid;
   }
@@ -151,9 +155,14 @@ button {
 
 @media screen and (max-width: 385PX) {
   header{
+    display:  flex;    
+    flex-direction: column;    
     background-image: none;
-    height: 10vh;
-    position: fixed;    
+    height: 27vh;
+    position: fixed;  
+    align-items: center;  
+    width: 100vw;
+    background-color: rgb(255, 255, 255);  
   }
   h1, .avatar-container, .avatar {
     display: none;
@@ -164,6 +173,8 @@ button {
     width: 55vw;
   }
   button {
+    display:  flex;    
+    flex-direction: column;    
     position: relative;
     width: 85vw;
     height: 9vw;
@@ -171,19 +182,23 @@ button {
     text-align: center;
   }
   input {
+    display:  flex;    
+    flex-direction: column;    
     width: 85vw;
     height: 9vw;
     margin: 1vh 7vw;
     position: relative;    
     text-align: center;
+    border-style: solid;
+    border-color: #262249;
+    border-width: 0.1px;
   }
   form {
-    display:  block;
-    margin-bottom: 1vw;
-    padding-bottom: 1vw;
-    position: relative;    
-    height: 12vh;
-
+    display:  flex;
+    flex-direction: column;
+    position: fixed;    
+    height: 27vh;
+    background-color: rgb(255, 255, 255);  
   }
   #songList {
     padding: 30vw 1vw 1vw 1vw !important;
